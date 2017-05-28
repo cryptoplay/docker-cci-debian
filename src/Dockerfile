@@ -1,6 +1,6 @@
-FROM debian:jessie
+FROM debian:8.8
 
-#ENV DOCKER_VERSION 17.03.1~ce-0~ubuntu-xenial
+ENV DOCKER_VERSION 17.03.1~ce-0~debian-jessie
 ENV COMPOSE_VERSION 1.13.0
 ENV GOSS_VERSION 0.3.2
 ENV BATS_VERSION 0.4.0
