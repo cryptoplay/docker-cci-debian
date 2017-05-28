@@ -25,6 +25,7 @@ RUN apt-get update && \
     git \
     gzip \
     make \
+    nano \
     python-dev \
     openssh-client \
     tar \
