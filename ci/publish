@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+BUILD_DATE=$(date +%Y%m%dT%H%M)
+VCS_REF=${CIRCLE_SHA1:0:7}
+TAG=${BUILD_DATE}-git-${VCS_REF}
+
+docker login -u ${user} -p ${pass}
+docker tag cryptoplay/cci-debian cryptoplay/cci-debian:${TAG}
+docker push cryptoplay/cci-debian:${TAG}
+docker push cryptoplay/cci-debian:latest
+docker logout
